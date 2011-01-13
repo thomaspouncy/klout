@@ -33,7 +33,10 @@ class Klout
     end
 
     def score(username)
-      request_uri = "http://klout.com/api/twitter/1/klout/#{@@api_key}/#{username}.json"
+    	userlist = username.inject("") do |userlist,user|
+    		userlist += "#{user},"
+    	end
+      request_uri = "http://api.klout.com/1/klout.json?key=#{@@api_key}&users=#{userlist.chop}"
       return request(request_uri)
     end
     
@@ -43,10 +46,9 @@ class Klout
     end
     
     def request(request_uri)
-      url = URI.parse(request_uri)
-      response = Net::HTTP.start(url.host, url.port) { |http|
-        http.get(url.path)
-      }
+      uri = URI.parse(request_uri)
+      http = Net::HTTP.new(uri.host, uri.port)
+      response = http.request(Net::HTTP::Get.new(uri.request_uri))
       
       case response
         when Net::HTTPSuccess
