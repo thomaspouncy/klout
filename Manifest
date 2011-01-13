@@ -1,8 +1,11 @@
+CHANGELOG
 Manifest
 README
 README.rdoc
 Rakefile
+init.rb
 lib/klout.rb
+lib/uniquify.rb
 spec/klout_spec.rb
 spec/spec.opts
 spec/spec_helper.rb

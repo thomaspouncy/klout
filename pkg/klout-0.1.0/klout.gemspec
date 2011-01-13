@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
   s.date = %q{2011-01-13}
   s.description = %q{Klout - Twitter Analytics}
   s.email = %q{jason.e.torres@gmail.com}
-  s.extra_rdoc_files = ["README", "README.rdoc", "lib/klout.rb", "tasks/rspec.rake"]
-  s.files = ["Manifest", "README", "README.rdoc", "Rakefile", "lib/klout.rb", "spec/klout_spec.rb", "spec/spec.opts", "spec/spec_helper.rb", "tasks/rspec.rake", "klout.gemspec"]
+  s.extra_rdoc_files = ["CHANGELOG", "README", "README.rdoc", "lib/klout.rb", "lib/uniquify.rb", "tasks/rspec.rake"]
+  s.files = ["CHANGELOG", "Manifest", "README", "README.rdoc", "Rakefile", "init.rb", "lib/klout.rb", "lib/uniquify.rb", "spec/klout_spec.rb", "spec/spec.opts", "spec/spec_helper.rb", "tasks/rspec.rake", "klout.gemspec"]
   s.homepage = %q{http://github.com/jasontorres/klout}
   s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Klout", "--main", "README"]
   s.require_paths = ["lib"]
